@@ -12,16 +12,17 @@ from os.path import join, getsize
 from os.path import isfile
 
 #---------------- ls ----------------------#
-"""
-Define un ls para obtener un listado de archivos
-"""
+
 def ls(ruta = getcwd()):
+    """
+    Define un ls para obtener un listado de archivos
+    """
     return [abspath(arch.path) for arch in scandir(ruta) if arch.is_file()]
 
-"""
-Crea la carpeta segun el modelo de cámara que se le asigne
-"""
 def crearModelo(strCam, strModel):
+    """
+    Crea la carpeta segun el modelo de cámara que se le asigne
+    """
     print('Procesando...')
     carpetas = os.listdir(getcwd())
     for carp in carpetas:
